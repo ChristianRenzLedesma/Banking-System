@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+        body {
+            font-size: 20px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .top-row {
+            width: 2030px;
+            height: 190px;
+            background-color: rgb(14, 176, 191);
+        }
+
+        .image1 {
+            width: 160px;
+            margin-top: 20px;
+            margin-left: 40px;
+        }
+
+        h4 {
+            margin-top: -150px;
+            margin-left: 200px;
+            color: white;
+        }
+
+        .text-2 {
+            margin-top: -20px;
+        }
+
+        hr {
+            width: 900px;
+            margin-left: 1px;
+        }
+
+        #pst-time {
+            margin-left: 1600px;
+            margin-top: 50px;
+        }
+
+        a {
+            font-family: "Kanit", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+            text-shadow: 1px 3px 4px;
+            border-radius: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .second-row {
+            width: 2030px;
+            height: 70px;
+            background-color: cyan;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            border-collapse: collapse;
+            padding: 10px;
+            float: left;
+        }
+
+        .navbar a {
+            color: green;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        .navbar a:hover {
+            border-radius: 18px;
+            background-color: red;
+            transition: background-color 0.3s ease;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all">
+        <div class="top-row">
+            <img class="image1" src="Banking.jpg" alt="">
+            <h4>Republic of the Philippines
+                <hr>
+            </h4>
+            <h2 style="color: orangered; font-size: 30px; margin-top: -20px; margin-left: 200px;">Banking System</h2>
+            <h4 class="text-2">Give a man a bank and he will rob everyone.</h4>
+            <h2 style="font-size: 20px; margin-top: -150px; margin-left: 1600px;" class="text-3">Philippines Standard
+                Time:
+            </h2>
+            <div id="pst-container">
+                <a id="pst-time" href="#" style="text-decoration: none; color: inherit !important;"></a>
+            </div>
+        </div>
+        <div class="second-row">
+            <nav class="navbar">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Bank Info</a>
+                <a href="#">Account</a>
+                <a href="#">Register</a>
+                <a href="#">Deposit</a>
+                <a href="#">Withdrawal</a>
+
+            </nav>
+        </div>
+        <img style="width: 2030px;" src="Background.jpg" alt="">
+        <h2 style="margin-top: -1020px; text-shadow: 1px 3px 4px; margin-left: 10px; color: orange;">Create: Christian Renz Ledesma</h2>
+    </div>
+    
+
+    <script>
+        function displayPST() {
+            var currentTime = new Date();
+            var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true, timeZone: 'Asia/Manila' };
+            var pstTime = currentTime.toLocaleString('en-PH', options);
+            document.getElementById('pst-time').textContent = pstTime;
+        }
+
+        setInterval(displayPST, 1000);
+    </script>
+</body>
+</html>
